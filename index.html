@@ -4,66 +4,66 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link href="maincss.css" rel="stylesheet" type="text/css"/>
-   <title>Pokedex</title>
-   <script src="mainjs.js" defer></script>
+   <link href="/static/main.css" rel="stylesheet" type="text/css"/>
+   <title>My Portfolio</title>
+   <script src="/static/mainjs.js" defer></script>
 </head>
 <body>
-    <h1>Pokemon # 1-80</h1>
-
-    <p>Enter numbers into the empty boxes and press Enter, or click Add to bring up Pokemon!</p>
-
-    <input type="number" onkeypress="hitEnter()" name="1stinput" id="1stinput" min="1" max="80">
-    <br>
-    <input type="number" onkeypress="hitEnter()" name="2ndinput" id="2ndinput" min="1" max="80">
-    <br>
-    <input type="number" onkeypress="hitEnter()" name="3rdinput" id="3rdinput" min="1" max="80">
-    <button type="submit" onclick="chooseImages()">Add</button>
-    
-    <div class="wrapper">
-        <section>
-            <div class="container">
-                <div class="imgContainer">
-                    <h3 id="title1"></h3>
-                    <img id="1stimage" src="" alt="">
-                </div>
-                <div class="details">
-                    <p id="number1"></p>
-                    <p id="content1"></p>
-                    <p id="type1"></p>
-                    <p id="weakness1"></p>
-                </div>
-            </div>
-        </section>
-        <hr>
-        <section>
-            <div class="container">
-                <div class="imgContainer">
-                    <h3 id="title2"></h3>
-                    <img id="2ndimage" src="" alt="">
-                </div>
-                <div class="details">
-                    <p id="number2"></p>
-                    <p id="content2"></p>
-                    <p id="type2"></p>
-                    <p id="weakness2"></p>                </div>
-            </div>
-        </section>
-        <hr>
-        <section>
-            <div class="container">
-                <div class="imgContainer">
-                    <h3 id="title3"></h3>
-                    <img id="3rdimage" src="" alt="">
-                </div>
-                <div class="details">
-                    <p id="number3"></p>
-                    <p id="content3"></p>
-                    <p id="type3"></p>
-                    <p id="weakness3"></p>                
-                </div>
-            </div>
-        </section>
+    <h1 class="title">Web Developer.</h1>
+    <h2 class="inline">Hello. My name is </h2><h2 class="nameEmphasis">Christian.</h2>
+    <h2>I am...</h2>
+ 
+    <div class="searchBox">
+    <input onkeypress="hitEnter()" type="text" id="descriptionInput" name="descriptionInput" placeholder="Say something nice" autofocus> 
+    <button onclick="addDescription()">Add</button>
     </div>
+ 
+    <div id="appendContainer"></div>
+
+    <h2 class="h2Emphasis">Skills</h2>
+    <div class="bgEmphasis listEmphasis">
+        <ul>
+            <li>Javascript</li>
+            <li>Python</li>
+            <li>SQL / POSTGRESQL</li>
+            <li>APIs</li>
+
+        </ul>
+        <ul>
+            <li>REST API Apps</li>
+            <li>Flask Framework</li>
+            <li>HTML</li>
+            <li>CSS</li>                
+        </ul>
+    </div>
+
+    <h2 class="h2Emphasis">Projects</h2>
+    <div class="container bgEmphasis">
+        <div class="project">
+            <a href="https://pokemonsocial308.herokuapp.com/home" target="_blank"><h3>Pokemon Social</h3></a>
+            <p>Pokemon themed social media app. Sign up, choose your picture, your pokemon, and then post in the blog section while showing off your style. The Pokedex section consumes JSON from the database in my REST API App to display info on your favorite Pokemon. Built with Flask, Javascript, SQL, and hosted on Heroku.</p>
+            <a class="raise" href="https://github.com/Lifestream308/pokemon-social.git" target="_blank">Github Code</a>
+        </div>        
+        <div class="project">
+            <a href="https://pokemondb308.herokuapp.com/home" target="_blank"><h3>REST API App</h3></a>
+            <p>Register and log in with credentials. Create, read, update, and delete posts in the app or through REST API routes using GET/POST/PUT/DELETE methods! I filled the posts with Pokemon information so I can send it to my Pokemon social media app in the form of JSON.</p>
+            <a class="raise" href="https://github.com/Lifestream308/pokemondb308" target="_blank">Github Code</a>
+        </div>
+    </div>
+
+    <h2 class="h2Emphasis">Background</h2>
+    <p class="bgEmphasis">My programming journey started thanks to my local library. I found an old book at my library that taught people how to make their very first website. The content was outdated, but I was in love. After that book I moved on to more modern books, youtube videos, forums, and Javascript. Learning new programming skills and being able to apply them immediately is incredibly fun. Programming has made me believe that knowledge truly is power and I love it.</p>
+
+    <footer>
+        <h2 class="h2Emphasis">Contact Me!</h2>
+        <form class="bgEmphasis" action="" autocomplete="on">
+            <label for="fname">Your Name:</label><br>
+            <input type="text" id="fname" name="fname" placeholder="Name" style="width: 80%" value=""><br>
+            <label for="message">Message:</label><br>
+            <input type="text" id="message" name="message" placeholder="Hello, I can't wait to work with you!" style="width: 80%" value=""><br><br>
+        
+            <input class="sendMessage btn" type="submit" value="Send Message">
+        </form> 
+    </footer>
 </body>
 </html>

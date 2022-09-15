@@ -7,7 +7,7 @@ html {
     box-sizing: border-box;
 }
 body {
-    background: url(/static/images/pic5.jpg);
+    background: url(images/pic5.jpg);
     /* background-color: cornsilk; */
     background-repeat: no-repeat;
     background-attachment: fixed;
